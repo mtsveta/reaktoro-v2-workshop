@@ -1,0 +1,17 @@
+name: reaktoro-v2-workshop
+
+channels:
+  - conda-forge
+
+dependencies:
+  - reaktoro
+  - pip
+  - pip:
+    - numpy
+    - numba
+    - matplotlib
+    - bokeh
+    - pandas
+    - jupyter-book
+    - jupyterlab
+    - sphinx-inline-tabs
