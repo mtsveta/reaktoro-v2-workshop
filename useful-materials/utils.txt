@@ -1,0 +1,36 @@
+To create an environment with `reaktoro` package installed:
+$ conda env create --file environment.yml
+
+To run python scripts:
+$ python path_to_pythonscipt/ex-beginner-equilibrium-phreeqc.py
+
+You can create python script first and then generate a notebook by running:
+$ make
+
+To start jupyterlab locally:
+$ jupyter lab
+
+To safely shutdown Jupyter server:
+$ CTRL + C
+
+If working from the script, to update
+jupytext --sync scripts/ex-beginner-geobiology.py
+
+
+Jupytext commands
+
+The package provides a jupytext script for command line conversion between the various notebook extensions:
+
+jupytext --to py notebook.ipynb                 # convert notebook.ipynb to a .py file
+jupytext --to py:percent notebook.ipynb         # convert notebook.ipynb to a .py file in the double percent format
+jupytext --to py:percent --opt comment_magics=false notebook.ipynb   # same as above + do not comment magic commands
+jupytext --to markdown notebook.ipynb           # convert notebook.ipynb to a .md file
+jupytext --output script.py notebook.ipynb      # convert notebook.ipynb to a script.py file
+
+jupytext --to notebook notebook.py              # convert notebook.py to an .ipynb file with no outputs
+jupytext --update --to notebook notebook.py     # update the input cells in the .ipynb file and preserve outputs and metadata
+
+jupytext --to md --test notebook.ipynb          # Test round trip conversion
+
+jupytext --to md --output - notebook.ipynb      # display the markdown version on screen
+jupytext --from ipynb --to py:percent           # read ipynb from stdin and write double percent script on stdout
