@@ -1,6 +1,12 @@
 To create an environment with `reaktoro` package installed:
 $ conda env create --file environment.yml
 
+Update conda packages:
+
+$ conda update packagename # To update specific package in the current env.
+$ conda update --all # To update all packages in the current environment.
+$ conda update -n myenv --all # To update all packages in myenv environment.
+
 To run python scripts:
 $ python path_to_pythonscipt/ex-beginner-equilibrium-phreeqc.py
 
