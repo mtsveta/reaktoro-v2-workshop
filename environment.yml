@@ -4,7 +4,7 @@ channels:
   - conda-forge
 
 dependencies:
-  - reaktoro=2.0.0rc20
+  - reaktoro
   - pip
   - pip:
     - numpy
